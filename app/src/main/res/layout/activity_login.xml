@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/pgmate_background">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMainTitle"
+        android:text="LOGIN"
+        android:fontFamily="@font/amarante"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="70dp"/>
+
+
+    <EditText
+        android:id="@+id/etMyProfileUsername"
+        android:layout_width="250dp"
+        android:layout_height="40sp"
+        android:hint=" UserName"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:background="@drawable/pgloginshape"
+        android:gravity="center_vertical"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="8sp"
+        android:fontFamily="@font/amarante"
+        android:drawableLeft="@drawable/icon_username"/>
+
+    <EditText
+        android:id="@+id/etMyProfilePassword"
+        android:layout_width="250dp"
+        android:layout_height="40sp"
+        android:hint="  Password"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/pgloginshape"
+        android:gravity="center_vertical"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/amarante"
+        android:paddingLeft="8sp"
+        android:drawableLeft="@drawable/icon_password"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginForgotPassword"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:fontFamily="@font/amarante"
+        android:gravity="right"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="10dp"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbNewUserShowHidePassword"
+        android:text=" Show Password"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:checked="false"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLoginLogin"
+        android:text ="login"
+        android:textColor="@color/black"
+        android:background="@drawable/login_button_color"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50sp"
+        android:fontFamily="@font/amarante"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvloginwith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14sp"
+        android:layout_marginRight="90sp"
+        android:layout_marginBottom="20sp"
+        android:gravity="center_horizontal"
+        android:text="Social Login"
+        android:textColor="@color/black"
+        android:fontFamily="@font/amarante"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/ivLoginGoogle"
+        android:src="@drawable/google_icon"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tvsignup"
+        android:text= "Don't have an account yet? Sign up "
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:fontFamily="@font/amarante"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        />
+
+</LinearLayout>
