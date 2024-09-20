@@ -81,20 +81,20 @@ public class RegistrationActivity extends AppCompatActivity {
                     etUsername.setError("Please Enter Your Username");
                 } else if (etUsername.getText().toString().length() < 8) {
                     etUsername.setError("Username must be greater than 8");
-                } else if (!etUsername.getText().toString().matches(".[A-Z].")) {
+                } else if (!etUsername.getText().toString().matches(".*[A-Z].*")) {
                     etUsername.setError("Please Used At Least 1 Uppercase Letter");
-                } else if (!etUsername.getText().toString().matches(".[a-z].")) {
+                } else if (!etUsername.getText().toString().matches(".*[a-z].*")) {
                     etUsername.setError("Please   Used at least 1 Lowercase Letter");
-                } else if (!etUsername.getText().toString().matches(".[0-9].")) {
+                } else if (!etUsername.getText().toString().matches(".*[0-9].*")) {
                     etUsername.setError("Please  Used at least 1 Number");
-                } else if (!etUsername.getText().toString().matches(".[@,#,$,!].")) {
+                } else if (!etUsername.getText().toString().matches(".*[@,#,$,!].*")) {
                     etUsername.setError("Please  enter At least 1 special symbol");
                 } else if (etPassword.getText().toString().isEmpty()) {
                     etPassword.setError("Please Enter Your Password");
                 } else if (etPassword.getText().toString().length() < 8) {
                     etPassword.setError("Password must be greater than 8");
                 } else {
-                    Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
+                    Intent i = new Intent(RegistrationActivity.this, LoginActivity.class);
                     startActivity(i);
             }
 
