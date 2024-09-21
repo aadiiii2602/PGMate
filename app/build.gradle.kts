@@ -41,4 +41,5 @@ dependencies {
     implementation ("com.airbnb.android:lottie:6.4.1")
     implementation("com.google.zxing:core:3.2.1")
     implementation ("com.loopj.android:android-async-http:1.4.11")
+    implementation ("com.google.android.gms:play-services-auth:21.2.0")
 }

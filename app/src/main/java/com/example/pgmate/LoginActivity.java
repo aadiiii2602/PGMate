@@ -12,13 +12,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
     EditText etUsername , etPassword;
     TextView tvForgetPassword, tvsignup;
     CheckBox cbShowHidePassword;
     Button btnLogin;
+    GoogleSignInOptions googleSignInOptions;
+    GoogleSignInClient googleSignInClient;
+    AppCompatButton btnSignInwithGoogle;
+
 
 
 
@@ -34,6 +47,18 @@ public class LoginActivity extends AppCompatActivity {
         cbShowHidePassword = findViewById(R.id.cbNewUserShowHidePassword);
         btnLogin = findViewById(R.id.btnLoginLogin);
         tvsignup  = findViewById(R.id.tvsignup);
+        btnSignInwithGoogle = findViewById(R.id.btnLoginSignGoogle);
+
+        googleSignInOptions = new GoogleSignInOptions.Builder(googleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        googleSignInClient= GoogleSignIn.getClient(LoginActivity.this,googleSignInOptions);
+
+        btnSignInwithGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+                signIn();
+            }
+        });
 
 
         cbShowHidePassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -101,6 +126,26 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Get OTP Here", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void signIn() {
+        Intent i = googleSignInClient.getSignInIntent();
+        startActivityForResult(i,999);
+    }
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==999){
+            Task<GoogleSignInAccount> task =GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                task.getResult(ApiException.class);
+                Intent i = new Intent(LoginActivity.this,ProfileActivity.class);
+                startActivity(i);
+                finish();
+            }catch (Exception e){
+               Toast.makeText(this,"Something wrong",Toast.LENGTH_SHORT).show();
+            }
+
+        }
     }
 
 }

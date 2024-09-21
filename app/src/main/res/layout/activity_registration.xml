@@ -118,15 +118,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:checked="false"
         />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="REGISTRATION"
-        android:fontFamily="@font/amarante"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:layout_marginLeft="70dp"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="170dp"
