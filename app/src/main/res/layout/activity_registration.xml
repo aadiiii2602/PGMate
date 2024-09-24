@@ -8,7 +8,6 @@
     android:orientation="vertical"
     android:background="@drawable/pgmate_background">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +88,6 @@
         android:fontFamily="@font/amarante"
         android:drawableLeft="@drawable/icon_username"/>
 
-
     <EditText
         android:id="@+id/tvMyProfilePassword"
         android:layout_width="250dp"
@@ -116,9 +114,7 @@
         android:textSize="14sp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-condensed-medium"
-        android:checked="false"
-        />
-
+        android:checked="false" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="170dp"

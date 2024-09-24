@@ -32,10 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     GoogleSignInClient googleSignInClient;
     AppCompatButton btnSignInwithGoogle;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         cbShowHidePassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -72,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,15 +96,13 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (!etPassword.getText().toString().matches(".*[@,#,$,&,!].*")) {
                     etPassword.setError("Please Used 1 Special Symbol");
                 } else {
-
                     Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                     Toast.makeText(LoginActivity.this, "Successfully Done", Toast.LENGTH_SHORT).show();
                     startActivity(i);
                 }
             }
-
-
         });
+
         tvsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,6 +126,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = googleSignInClient.getSignInIntent();
         startActivityForResult(i,999);
     }
+
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==999){
@@ -144,10 +139,6 @@ public class LoginActivity extends AppCompatActivity {
             }catch (Exception e){
                Toast.makeText(this,"Something wrong",Toast.LENGTH_SHORT).show();
             }
-
         }
     }
-
 }
-
-

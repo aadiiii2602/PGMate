@@ -83,6 +83,5 @@ Think of me as your guide in this journey. I am here to make your experience ama
                 android:layout_weight="1"/>
 
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

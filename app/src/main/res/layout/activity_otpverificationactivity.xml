@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".OtpVerificationActivity"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="40dp">
-
 
         <ImageView
             android:layout_width="250sp"
@@ -37,6 +37,17 @@
             android:textSize="18sp"
             android:layout_marginTop="10dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvVerifyOTPMobileNo"
+        android:text="+91-7776544333"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:layout_marginTop="4sp"
+        android:fontFamily="sans-serif-black"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,8 +68,7 @@
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:gravity="center"
-                android:layout_marginLeft="4dp"
-                />
+                android:layout_marginLeft="4dp" />
 
             <EditText
                 android:layout_width="40dp"
@@ -72,8 +82,8 @@
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:gravity="center"
-                android:layout_marginLeft="4dp"
-                />
+                android:layout_marginLeft="4dp" />
+
             <EditText
                 android:layout_width="40dp"
                 android:id="@+id/etOTPVerification3"
@@ -86,8 +96,7 @@
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:gravity="center"
-                android:layout_marginLeft="4dp"
-                />
+                android:layout_marginLeft="4dp"/>
 
             <EditText
                 android:layout_width="40dp"
@@ -101,8 +110,7 @@
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:gravity="center"
-                android:layout_marginLeft="4dp"
-                />
+                android:layout_marginLeft="4dp" />
 
             <EditText
                 android:layout_width="40dp"
@@ -115,8 +123,7 @@
                 android:maxLength="1"
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
-                android:gravity="center"
-                />
+                android:gravity="center" />
 
             <EditText
                 android:layout_width="40dp"
@@ -130,10 +137,10 @@
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:gravity="center"
-                android:layout_marginLeft="4dp"
-                />
+                android:layout_marginLeft="4dp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -144,8 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Didn't receive the OTP?"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -155,8 +161,7 @@
                 android:layout_marginLeft="4dp"
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
 
         </LinearLayout>
 

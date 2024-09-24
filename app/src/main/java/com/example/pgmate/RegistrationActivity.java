@@ -27,7 +27,6 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class RegistrationActivity extends AppCompatActivity {
-
     EditText etName, etMobileno, etEmailid, etUsername, etPassword;
     Button btnRegister;
     CheckBox cbShowHidePassword;
@@ -46,7 +45,6 @@ public class RegistrationActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnLoginLogin);
         cbShowHidePassword = findViewById(R.id.cbNewUserShowHidePassword);
 
-
         cbShowHidePassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -54,12 +52,9 @@ public class RegistrationActivity extends AppCompatActivity {
                     etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 } else {
                     etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
                 }
-
             }
         });
-
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,9 +90,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     Intent i = new Intent(RegistrationActivity.this, LoginActivity.class);
                     startActivity(i);
             }
-
         }
     });
 }
 }
-
