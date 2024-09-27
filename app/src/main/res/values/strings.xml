@@ -2,4 +2,6 @@
     <string name="app_name">PGMate</string>
     <string name="title">PGMate</string>
     <string name="subtitle">Finding Shelter to Live</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
