@@ -18,9 +18,8 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="150dp" />
 
-        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,9 +29,8 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20dp" />
 
-        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,9 +40,8 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="25dp" />
 
-        />
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +55,5 @@
         android:layout_margin="16sp"
         android:fontFamily="@font/amarante"
         android:layout_gravity="center_horizontal"/>
-
-
 
 </LinearLayout>

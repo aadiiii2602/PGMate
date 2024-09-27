@@ -15,7 +15,6 @@ public class SplashActivity extends AppCompatActivity {
     TextView tvTitle,tvSubtitle;
     Animation animTranslate;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -21,15 +21,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class ProfileActivity extends AppCompatActivity {
-
     TextView tvName,tvEmail;
     AppCompatButton btnSignOut;
     GoogleSignInOptions googleSignInOptions;
     GoogleSignInClient googleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_profile);
 
             tvName= findViewById(R.id.tvName);
@@ -47,7 +46,6 @@ public class ProfileActivity extends AppCompatActivity {
             tvName.setText(name);
             tvEmail.setText(email);
 
-
             btnSignOut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -62,6 +60,5 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 }
