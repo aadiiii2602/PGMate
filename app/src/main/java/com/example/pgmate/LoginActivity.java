@@ -1,6 +1,8 @@
 package com.example.pgmate;
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -31,6 +33,9 @@ public class LoginActivity extends AppCompatActivity {
     GoogleSignInOptions googleSignInOptions;
     GoogleSignInClient googleSignInClient;
     AppCompatButton btnSignInwithGoogle;
+
+    NetworkChangeListener networkChangeListener = new NetworkChangeListener();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,5 +145,17 @@ public class LoginActivity extends AppCompatActivity {
                Toast.makeText(this,"Something wrong",Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(networkChangeListener, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(networkChangeListener);
     }
 }
