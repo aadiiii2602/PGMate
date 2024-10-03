@@ -1,6 +1,9 @@
 package com.example.pgmate;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
@@ -22,8 +25,30 @@ public class HomeActivity extends AppCompatActivity implements
         bottomNavigationView = findViewById(R.id.homeBottomNavView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.homebottomnavHome);
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.homeMenuMyOffers)
+        {
+
+        }else if (item.getItemId() == R.id.homeMenuMyCart) {
+
+        } else if (item.getItemId() == R.id.homeMenuMyProfile) {
+            Intent intent = new Intent(HomeActivity.this,ProfileActivity.class);
+            startActivity(intent);
+
+        }
+        return true;
+    }
+
     HomeFragment homeFragment = new HomeFragment();
     NotificationFragment notificationFragment = new NotificationFragment();
     MyProfileFragment myProfileFragment = new MyProfileFragment();
