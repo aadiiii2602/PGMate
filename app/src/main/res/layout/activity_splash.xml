@@ -40,4 +40,14 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/amarante" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle"
+        android:textColor="@color/dgreen"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/amarante" />
+
 </LinearLayout>
