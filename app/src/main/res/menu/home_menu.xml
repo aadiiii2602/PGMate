@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/homeMenuMyOffers"
-        android:title="My Offers"
+        android:id="@+id/homeMenuPersonalDetails"
+        android:title="Personal Details"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/homeMenuMyCart"
-        android:title="My Cart"
+        android:id="@+id/homeMenuAboutUs"
+        android:title="About Us"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/homeMenuMyProfile"
-        android:title="My Profile"
+        android:id="@+id/homeMenuContactUs"
+        android:title="Contact Us"
         app:showAsAction="never"/>
 
 </menu>

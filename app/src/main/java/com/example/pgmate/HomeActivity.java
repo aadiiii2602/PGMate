@@ -29,20 +29,23 @@ public class HomeActivity extends AppCompatActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
+        MenuInflater inflater= getMenuInflater();
         inflater.inflate(R.menu.home_menu,menu);
         return true;
     }
-
-    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.homeMenuMyOffers)
-        {
+        if (item.getItemId() == R.id.homeMenuPersonalDetails) {
+            Intent intent = new Intent(HomeActivity.this,PersonalDetailsActivity.class);
+            startActivity(intent);
 
-        }else if (item.getItemId() == R.id.homeMenuMyCart) {
 
-        } else if (item.getItemId() == R.id.homeMenuMyProfile) {
-            Intent intent = new Intent(HomeActivity.this,ProfileActivity.class);
+        }else if (item.getItemId() == R.id.homeMenuAboutUs){
+            Intent intent = new Intent(HomeActivity.this,AboutUsActivity.class);
+            startActivity(intent);
+
+
+        } else if (item.getItemId() == R.id.homeMenuContactUs) {
+            Intent intent = new Intent(HomeActivity.this,ContactUsActivity.class);
             startActivity(intent);
 
         }
